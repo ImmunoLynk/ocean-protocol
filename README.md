@@ -1,4 +1,4 @@
-# ocean-protocol
+# Ocean Protocol Integration
 Integration to Ocean so users can offer data on the marketplace.
 
 ## Ethereum connection
