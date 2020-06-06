@@ -11,8 +11,9 @@ from squid_py import (
     Config
 )
 
-from src import default_config_dict, metadata
+from src import default_config_dict
 from src.account import get_account
+from src.metadata import get_metadata
 
 FLASK_APPLICATION_NAME = 'ocean-protocol'
 TRANSACTION_RULE = '/transaction'
@@ -45,7 +46,12 @@ def process_transaction():
                 "address": <address point>,
                 "private_key": <private key>
             },
-            "price": <float representing price>
+            "price": <float representing price>,
+            "ipfs": {
+                "endpoint": <server endpoint>,
+                "hash": <hash value for server access>,
+                "type": <server access type>
+            }
         }
     """
 
@@ -60,10 +66,7 @@ def process_transaction():
             publisher_acct = get_account(_file.get('publisher'))
             consumer_acct = get_account(_file.get('consumer'))
 
-            # update the price
-            metadata.update({
-                'price': float(_file.get('price'))
-            })
+            metadata = get_metadata(_file)
 
             ddo = ocn.assets.create(metadata, publisher_acct, providers=[MARKET_PLACE_PROVIDER_ADDRESS])
             service_index = ddo.get_service(ServiceTypes.ASSET_ACCESS).index

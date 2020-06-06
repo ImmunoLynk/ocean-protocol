@@ -1,7 +1,3 @@
-import json
-import uuid
-import datetime
-
 # ! For some guidance:
 # <https://docs.oceanprotocol.com/concepts/introduction/>
 # <https://docs.oceanprotocol.com/concepts/pacific-network/#ocean-components-connected-to-pacific>
@@ -14,7 +10,7 @@ default_config_dict = {
         'keeper.path': 'artifacts_nile',
         'secret_store.url': 'https://secret-store.nile.dev-ocean.com/',
         'faucet.url': 'https://faucet.nile.dev-ocean.com',
-        
+
         'parity.address': '',
         'parity.password': '',
     },
@@ -25,25 +21,5 @@ default_config_dict = {
 
         'storage.path': 'squid_py.db',
         'downloads.path': 'downloads_nile',
-    }
-}
-
-metadata = {
-    "main": {
-        "name": "Ocean protocol white paper",
-        "dateCreated": datetime.datetime.now().strftime("%Y-%m-%dT%H:%M:%SZ"),
-        "author": "ImmunoLynk",
-        "license": "MIT LICENSE",
-        "files": [
-            {
-                "index": 0,
-                "contentType": "text/text",
-                "checksum": str(uuid.uuid4()),
-                "checksumType": "MD5",
-                "contentLength": "12057507",
-                "url": "https://raw.githubusercontent.com/oceanprotocol/barge/master/README.md"
-            }
-        ],
-        "type": "dataset"
     }
 }
