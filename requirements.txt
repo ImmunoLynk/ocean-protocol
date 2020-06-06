@@ -2,3 +2,4 @@ eth-account
 squid-py
 Flask==1.1.2
 flask-cors
+flask_web3
