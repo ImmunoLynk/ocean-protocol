@@ -59,4 +59,4 @@ def _get_account(data):
     adds = data.get("address")
     private_key = data.get("private_key")
 
-    return Account(Web3.toChecksumAddress(adds, None, None, None, private_key))
+    return Account(Web3.toChecksumAddress(adds), None, None, None, private_key)
