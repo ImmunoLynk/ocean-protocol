@@ -1,3 +1,6 @@
+# ocean-protocol
+Integration to Ocean so users can offer data on the marketplace.
+=======
 # Ocean Protocol Integration
 Integration to Ocean so users can offer data on the marketplace.
 
