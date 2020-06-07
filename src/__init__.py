@@ -1,7 +1,7 @@
+
 # ! For some guidance:
 # <https://docs.oceanprotocol.com/concepts/introduction/>
 # <https://docs.oceanprotocol.com/concepts/pacific-network/#ocean-components-connected-to-pacific>
-
 # TODO: take a look at https://docs.oceanprotocol.com/tutorials/connect-to-networks/
 default_config_dict = {
     'keeper-contracts': {
@@ -11,8 +11,8 @@ default_config_dict = {
         'secret_store.url': 'https://secret-store.nile.dev-ocean.com/',
         'faucet.url': 'https://faucet.nile.dev-ocean.com',
 
-        'parity.address': '',
-        'parity.password': '',
+        # 'parity.address': '',
+        # 'parity.password': '',
     },
     'resources': {
         'aquarius.url': 'https://aquarius.marketplace.dev-ocean.com',
